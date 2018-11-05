@@ -2,8 +2,7 @@
 class shape():
     def __init__(self,type):
         self.type = type
-        #self.shape = str(input("Which SHAPE do you want, circle or rectangle?  : "))
-        #return self.shape
+        
     def draw(self):
         pass
 
