@@ -1,57 +1,79 @@
-
-
 class shape():
-    def __init__(self,types):
+    types = ""
+
+    def __init__(self, types=None):
         self.types = types
-        
+
     def draw(self):
         pass
 
+
 class circle(shape):
-    def draw(self,types):
+    def __init__(self, types=None):
+        super().__init__()
+        self.types = types
+
+    def draw(self):
         print("Drawing the Circle...!")
 
+
 class rectangle(shape):
-    def draw(self, types):
+    def __init__(self, types=None):
+        super().__init__()
+        self.types = types
+
+    def draw(self):
         print("Drawing the Rectangle...!")
 
+
 class v1Rectangle(rectangle):
-    def __init__(self):
-        super().__init__(types = rectangle)
+    def __init__(self,):
+        super().__init__()
+        self.types = "rectangle"
+
     def drawline(self):
         print("Method 1 drawing rectangle")
 
+
 class v2Rectangle(rectangle):
     def __init__(self):
-        super().__init__(types = rectangle)
+        super().__init__()
+        self.types= "rectangle"
+
     def drawline(self):
         print("Method 2 drawing rectangle")
 
+
 class v1Circle(circle):
     def __init__(self):
-        super().__init__(types = circle)
+        super().__init__()
+        self.types = "circle"
+
     def drawcircle(self):
         print("Method 1 drawing circle")
 
+
 class v2Circle(circle):
     def __init__(self):
-        super().__init__(types = circle)
+        super().__init__()
+        self.types = "circle"
+
     def drawcircle(self):
         print("Method 2 drawing circle")
 
 
-class DP1(v1Circle,v1Rectangle):
+class DP1(v1Circle, v1Rectangle):
     def __init__(self):
-        super().__init__(v1Circle,v1Rectangle)
-        self.drawline(v1Rectangle)
-        self.drawcircle(v1Circle)
+        super().__init__()
+        self.drawline()
+        self.drawcircle()
 
-class DP2(v2Circle,v2Rectangle):
+
+class DP2(v2Circle, v2Rectangle):
     def __init__(self):
-        super().__init__(v2Circle,v2Rectangle)
-
-        self.drawline(v2Rectangle)
-        self.drawcircle(v2Circle)
+        super().__init__()
+        self.drawline()
+        self.drawcircle()
 
 
 if __name__ == '__main__':
