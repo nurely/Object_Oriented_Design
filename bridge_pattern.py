@@ -1,19 +1,19 @@
 
 class shape():
-    def __init__(self):
-        #self.shape = shape
-        self.shape = str(input("Which SHAPE do you want, circle or rectangle?  : "))
+    def __init__(self,type):
+        self.type = type
+        #self.shape = str(input("Which SHAPE do you want, circle or rectangle?  : "))
         #return self.shape
     def draw(self):
-        return
+        pass
 
 class circle(shape):
-    def draw(self):
-        print("Which TYPE of circle 1 or 2? : ")
+    def draw(self,type):
+        print("Drawing the Circle...!")
 
 class rectangle(shape):
-    def draw(self):
-        print("Which TYPE of rectangle 1 or 2? : ")
+    def draw(self, rectangle):
+        print("Drawing the Rectangle...!")
 
 class v1Rectangle(rectangle):
     def drawline(self):
@@ -31,33 +31,21 @@ class v2Circle(circle):
     def drawcircle(self):
         print("Method 2 drawing circle")
 
-class DP1(v1Circle,v1Rectangle):
-    drawline(v1Rectangle)
-    drawcircle(v1Circle)
+class DP1(self,v1Circle,v1Rectangle):
+    self.drawline(v1Rectangle)
+    self.drawcircle(v1Circle)
 
 class DP2(v2Circle,v2Rectangle):
-    drawline(v2Rectangle)
-    drawcircle(v2Circle)
+    self.drawline(v2Rectangle)
+    self.drawcircle(v2Circle)
 
 
+if __name__ == '__main__':
 
-
-#def circle():
-    #type_circle = int(input("Which type circle 1 or 2? : "))
-    #return type_circle
-
-#def draw(type_circle):
-    #if shape() == 1:
-        #print("Draw circle with Type 1 method")
-    #else:
-     #   print("Draw circle with Type 2 method")
-#type_rectangle = int(input("Which type rectange 1 or 2"))
-#if type_rectangle == 1:
-    #print("Draw rectangle with Tpye 1 method")
-#else:
-    #print("Draw rectangle with Tpye 2 method")
-
-
-circle()
+    DP = str(input("What design pattern is requested: "))
+    if DP == 'DP1'
+        DP1()
+    else:
+        DP2()
 
 
