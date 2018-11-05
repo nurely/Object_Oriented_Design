@@ -42,7 +42,7 @@ class DP2(v2Circle,v2Rectangle):
 if __name__ == '__main__':
 
     DP = str(input("What design pattern is requested: "))
-    if DP == 'DP1'
+    if DP == 'DP1':
         DP1()
     else:
         DP2()
