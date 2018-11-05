@@ -43,15 +43,15 @@ class v2Circle(circle):
 class DP1(v1Circle,v1Rectangle):
     def __init__(self):
         super().__init__(v1Circle,v1Rectangle)
-    self.drawline(v1Rectangle)
-    self.drawcircle(v1Circle)
+        self.drawline(v1Rectangle)
+        self.drawcircle(v1Circle)
 
 class DP2(v2Circle,v2Rectangle):    
     def __init__(self):
         super().__init__(v2Circle,v2Rectangle)
     
-    self.drawline(v2Rectangle)
-    self.drawcircle(v2Circle)
+        self.drawline(v2Rectangle)
+        self.drawcircle(v2Circle)
 
 
 if __name__ == '__main__':
